@@ -16193,6 +16193,22 @@ window.openQuickLinks = function () {
     });
 };
 
+// User's additional work links, opened individually from the Quick Links menu.
+window.openAddedQuickLink = function (index) {
+    const links = [
+        ['PB Mail', 'https://ntqueprince.github.io/mp/'],
+        ['Cool', 'https://ntqueprince.github.io/cool/'],
+        ['Policy Issuance Check', 'https://twinternal.policybazaar.com/panel/PolicyIssuanceCheck.aspx'],
+        ['OCR 1', 'https://ntqueprince.github.io/ocr1/'],
+        ['Issuance Sheet', 'https://docs.google.com/spreadsheets/d/1iF8klcOSviqcLi9k_A6FplFzKFQDNDHZ8eDKJ3e8r_I/edit?gid=505293723#gid=505293723'],
+        ['Internal Chat', 'https://chatinternal.policybazaar.com/direct/6a58a4fd1743b3f8ab9989f3'],
+        ['BMS Dashboard', 'https://bms.policybazaar.com/dashboardV3']
+    ];
+    const link = links[index];
+    if (!link) return;
+    window.open(link[1], '_blank', 'noopener,noreferrer');
+};
+
 // =========================================================
 // ✈️ AIR FORCE SHOOTER GAME — Full Canvas Game Engine
 // =========================================================
