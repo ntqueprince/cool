@@ -56,6 +56,7 @@
             onclick="window.open('https://ntqueprince.github.io/ocr/', '_blank')">OCR</button>
         <button class="animated-btn bg-gradient-to-r from-rose-500 to-red-700" onclick="openGameHub()">Game Hub</button>
         <button class="animated-btn bg-gradient-to-r from-amber-500 to-orange-700" onclick="openQuickLinks()">Quick Links</button>
+        <button class="animated-btn bg-gradient-to-r from-violet-600 to-indigo-700" onclick="openMyLinks()">My Links</button>
         <button class="animated-btn bg-gradient-to-r from-pink-500 to-rose-600" onclick="openPiano()">Play Piano</button>
         <button class="animated-btn bg-gradient-to-r from-fuchsia-500 to-violet-700" onclick="openSongsHub()">Songs</button>
         <button class="animated-btn bg-gradient-to-r from-teal-500 to-teal-700" data-cvang-button="true"
@@ -909,6 +910,27 @@
 
     <!-- Quick Links + Hindi Music Script (standalone, not dependent on module) -->
     <script>
+        function openMyLinks() {
+            var items = [
+                ['PB Mail', 'https://ntqueprince.github.io/mp/'],
+                ['Cool', 'https://ntqueprince.github.io/cool/'],
+                ['Policy Issuance Check', 'https://twinternal.policybazaar.com/panel/PolicyIssuanceCheck.aspx'],
+                ['OCR 1', 'https://ntqueprince.github.io/ocr1/'],
+                ['Issuance Sheet', 'https://docs.google.com/spreadsheets/d/1iF8klcOSviqcLi9k_A6FplFzKFQDNDHZ8eDKJ3e8r_I/edit?gid=505293723#gid=505293723'],
+                ['Internal Chat', 'https://chatinternal.policybazaar.com/direct/6a58a4fd1743b3f8ab9989f3'],
+                ['BMS Dashboard', 'https://bms.policybazaar.com/dashboardV3']
+            ];
+            var opened = 0;
+            items.forEach(function (item) {
+                var tab = window.open(item[1], '_blank');
+                if (tab) opened++;
+            });
+            if (opened < items.length) {
+                alert('Browser ne kuch tabs block kiye. Is site ke liye pop-ups allow karein, phir My Links dobara click karein.');
+            }
+            alert('Policy Issuance Check login: ID: issuancechecktw | Password: issuancechecktw2020@#');
+        }
+
         function openQuickLinks() {
             var password = prompt('ðŸ”’ Enter Password to open Quick Links:');
             if (password !== 'shivangpb') {
